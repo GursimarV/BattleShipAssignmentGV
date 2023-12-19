@@ -2,12 +2,14 @@
 #include <iostream>
 #include <stdexcept>
 
-BaseGame::BaseGame() {
+BaseGame::BaseGame() 
+{
     this->board = new Board(HEIGHT, WIDTH);
     this->board->init(SHIP_COUNT);
 }
 
-BaseGame::~BaseGame() {
+BaseGame::~BaseGame() 
+{
     delete this->board;
 }
 

@@ -6,27 +6,33 @@
 void run(BaseGame* control, BaseGame* assignment) 
 {
     int controlResult, assignmentResult = 0;
-    try {
+    try 
+    {
         controlResult = control->run();
         assignmentResult = assignment->run();
 
-        if (assignmentResult <= controlResult) {
+        if (assignmentResult <= controlResult) 
+        {
             std::cout << "Passed" << std::endl;
         }
 
-        if (assignmentResult == controlResult + 1) {
+        if (assignmentResult == controlResult + 1) 
+        {
             std::cout << "B" << std::endl;
         }
 
-        if (assignmentResult == controlResult + 2) {
+        if (assignmentResult == controlResult + 2) 
+        {
             std::cout << "C" << std::endl;
         }
 
-        if (assignmentResult == controlResult + 3) {
+        if (assignmentResult == controlResult + 3) 
+        {
             std::cout << "D" << std::endl;
         }
 
-        if (assignmentResult == controlResult + 4) {
+        if (assignmentResult == controlResult + 4) 
+        {
             std::cout << "F" << std::endl;
         }
     }
