@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{65fd2613-ffe0-4507-a453-b93886c9d55b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BattleShipAssignmentGV.cpp">
@@ -29,14 +32,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="board.h">
-      <Filter>Header Files</Filter>
+      <Filter>lib</Filter>
     </ClInclude>
     <ClInclude Include="consts.h">
-      <Filter>Header Files</Filter>
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>lib</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
