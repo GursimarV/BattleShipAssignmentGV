@@ -1,0 +1,9 @@
+# ninja log v5
+15	76	7270584341263208	CMakeFiles/BattleShipAssignmentGV.dir/tests/tests.cpp.obj	4b68b988f9a6354f
+10	422	7270584344705577	CMakeFiles/BattleShipAssignmentGV.dir/src/game.cpp.obj	4dc1a447e539cf61
+6	441	7270584344914676	CMakeFiles/BattleShipAssignmentGV.dir/src/BattleShipAssignmentGV.cpp.obj	22da47a5836c944c
+0	702	7270584347513310	CMakeFiles/BattleShipAssignmentGV.dir/src/board.cpp.obj	42b065487aa4bcd2
+702	817	7270584348645474	BattleShipAssignmentGV.exe	f4bb575ee3a7e126
+8	489	7270585506024483	CMakeFiles/BattleShipAssignmentGV.dir/src/game.cpp.obj	4dc1a447e539cf61
+3	532	7270585506452060	CMakeFiles/BattleShipAssignmentGV.dir/src/BattleShipAssignmentGV.cpp.obj	22da47a5836c944c
+532	669	7270585507783573	BattleShipAssignmentGV.exe	f4bb575ee3a7e126
