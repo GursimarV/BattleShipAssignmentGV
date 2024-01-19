@@ -5,6 +5,7 @@
 #include <iostream>
 #include <list>
 #include <cstdlib>
+using namespace std;
 
 class BaseGame {
 protected:
@@ -35,9 +36,9 @@ protected:
     }
 };
 
-class AssignmentGame : public BaseGame {
+class AssignmentGame : public BaseGame{
 protected:
-    //Structing Guessing
+    //Structuring Guessing
     struct Guess {
         int x;
         int y;
@@ -55,9 +56,10 @@ protected:
             int randomGuessX = 1 + rand() % 100;
             int randomGuessY = 1 + rand() % 100;
 
-            ///Making a random response to the guess
+            //Create a guess structure for the random guess
             Guess guessRandomCurrent = { randomGuessX, randomGuessY };
 
+            //Get the response from the board about the guess
             ResponseType response = this->board->guess(randomGuessX, randomGuessY);
 
             //Checking the random guess whether they hit, near miss, or miss
@@ -78,15 +80,19 @@ protected:
         return hits;
     }
 
+    // Function to test near misses in a given direction
     int TestNearMiss(int x, int y, int dx, int dy) {
         if (CheckValidGuess(x + dx, y + dy) && AnotherGuess(x + dx, y + dy)) {
+            // If it's a valid near miss, add the guess to the correctGuess list and return 1
             correctGuess.push_back({ x + dx, y + dy });
             return 1;
         }
         return 0;
     }
 
+    // Function to check if the last guess is valid
     bool CheckingLastGuess(int x, int y) {
+        // Check if the coordinates are present in either correctGuess or incorrectGuess lists
         for (const auto& g : correctGuess) {
             if (g.x == x && g.y == y) {
                 return false;
@@ -98,14 +104,17 @@ protected:
                 return false;
             }
         }
-
+        // If the coordinates are not present, return true
         return true;
+        return SHIP_COUNT;
     }
 
+    // Function to check if another guess at the given coordinates results in a hit
     bool AnotherGuess(int x, int y) {
         return this->board->guess(x, y) == ResponseType::HIT;
     }
 
+    // Function to check if the given coordinates are within the valid range
     bool CheckValidGuess(int x, int y) {
         return x <= WIDTH && y <= HEIGHT;
     }

@@ -4,16 +4,16 @@ project(BattleShipAssignmentGV)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
-include_directories(lib)
-include_directories(src)
-include_directories(tests)
+include_directories(cmake-build-debug/lib)
+include_directories(cmake-build-debug/src)
+include_directories(cmake-build-debug/tests)
 
 add_executable(BattleShipAssignmentGV
-        lib/board.h
-        lib/consts.h
-        lib/game.h
-        src/BattleShipAssignmentGV.cpp
-        src/board.cpp
-        src/game.cpp
-        tests/tests.cpp
+        cmake-build-debug/lib/board.h
+        cmake-build-debug/lib/consts.h
+        cmake-build-debug/lib/game.h
+        cmake-build-debug/src/BattleShipAssignmentGV.cpp
+        cmake-build-debug/src/board.cpp
+        cmake-build-debug/src/game.cpp
+        cmake-build-debug/tests/tests.cpp
         README.md)
